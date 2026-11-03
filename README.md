@@ -61,7 +61,10 @@ git push
    ```powershell
    git pull
    ```
-Vamos criar juntos as classes
+Vamos criar juntos as classes PRODUTO E CATEGORIA
+
+<img width="551" height="228" alt="image" src="https://github.com/user-attachments/assets/d7a7d9f3-3858-4984-a156-dcfa947441e1" />
+
 
 ## 2️⃣ Durante e no fim da aula: commit e push
 
