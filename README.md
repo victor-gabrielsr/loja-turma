@@ -41,9 +41,20 @@ py -m unittest -v
 - `OK` quer dizer que todos os testes passaram. ✅
 - `FAILED` ou `ERROR` quer dizer que ainda falta alguma coisa no código. Leia a mensagem: ela diz qual teste falhou e em qual linha.
 
+## 4️⃣ Fazer alteração incluindo seu nome e subir commit
+
+No VS Code, abra o arquivo na pasta src `main.py` e inclua seu nome em `print("Desenvolvido por: Seu Nome Aqui")`. 
+
+```powershell
+git add .
+git status
+git commit -m "primeiro commit"
+git push
+```
+
 # AULA 2: CONSTRUINDO CLASSES PRODUTO E CATEGORIA
 
-## 4️⃣ Atualizar, assim que for orientado:
+## 1️⃣ Atualizar, assim que for orientado:
 
 1. Abra o **seu** fork (`github.com/SEU-USUARIO/loja-turma`) e clique em **Sync fork → Update branch**. Isso traz os testes novos que a professora irá inserir.
 2. No terminal, dentro da pasta do projeto:
@@ -52,7 +63,7 @@ py -m unittest -v
    ```
 Vamos criar juntos as classes
 
-## 5️⃣ Durante e no fim da aula: commit e push
+## 2️⃣ Durante e no fim da aula: commit e push
 
 ```powershell
 git add .
@@ -65,7 +76,7 @@ Ou pelo VS Code: **Source Control** (ícone da forquilha) → escreva a mensagem
 Depois, atualize a página do seu fork no site e confira se o commit apareceu.
 
 # SEMPRE
-## 6️⃣ Antes de ir embora: logout
+## 1️⃣ Antes de ir embora: logout
 
 Máquina compartilhada! Siga a seção **"4. Indo embora: logout"** do `Guia-git-github.md`: saia da conta no VS Code, apague nome e e-mail do Git, remova a credencial do Windows e saia do GitHub no navegador.
 VEJA: `https://github.com/POO-40h-tec-web-mobile-EFG/loja-turma/blob/main/_Orientacoes_e_apoio/Guia-git-github.md`
