@@ -6,7 +6,7 @@ Para executar, abra o terminal na pasta do projeto e digite:
     py src/m
 """
 
-print("""""=================================
+print("""=================================
 Bem-vindo(a) à Loja POO!
 =================================""""")
 
