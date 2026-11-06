@@ -1,14 +1,7 @@
-"""
-Loja POO — arquivo principal.
-# Este é o arquivo principal do sistema.
+from models.categoria import Categoria
+from models.produto import Produto
 
-Para executar, abra o terminal na pasta do projeto e digite:
-    py src/m
-"""
+eletronicos = Categoria ("Eletrônicos")
+mouse = Produto("Mouse", 2, 2, "Eletrônicos")
 
-print("""=================================
-Bem-vindo(a) à Loja POO!
-=================================""""")
-
-# ✏️ AULA 1: troque o texto abaixo pelo seu nome
-print("Desenvolvido por: Victor Gabriel")
+print(mouse)
