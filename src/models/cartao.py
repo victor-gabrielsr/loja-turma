@@ -1,35 +1,16 @@
-"""
-Classe Cartao (aula de 12/11).
-
-Fontes para estudar:
-- Herança:
-  https://docs.python.org/pt-br/3/tutorial/classes.html#inheritance
-- super():
-  https://docs.python.org/pt-br/3/library/functions.html#super
-- Parâmetro opcional (valor padrão):
-  https://docs.python.org/pt-br/3/tutorial/controlflow.html#default-argument-values
-- raise: como gerar um erro:
-  https://docs.python.org/pt-br/3/tutorial/errors.html#raising-exceptions
-- Livro: KEOGH, J.; GIANNINI, M. OOP desmistificado. Alta Books, 2005.
-"""
-
 from models.comprovante import Comprovante
 from models.pagamento import Pagamento
 
-
+# HERANÇA: Cartao herda os atributos e métodos de Pagamento.
+# Também implementa o contrato definido por Comprovante.
 class Cartao(Pagamento, Comprovante):
-    """
-    HERANÇA: Cartao É UM Pagamento.
-    INTERFACE: Cartao também implementa o contrato Comprovante.
-    """
-
-    JUROS = 0.10    # RN9: acima de 3 parcelas, o total fica 10% maior
+    JUROS = 0.10
 
     def __init__(self, valor, parcelas=1):
-        # parcelas=1 é um parâmetro OPCIONAL: simula a sobrecarga em Python.
-        # Cartao(100) e Cartao(100, 6) funcionam com o mesmo construtor.
-        super().__init__(valor)    # super() chama o construtor de Pagamento
-        if parcelas < 1 or parcelas > 12:    # RN10: de 1 a 12 parcelas
+        # HERANÇA: super() chama o construtor da classe mãe Pagamento,
+        # reutilizando sua inicialização.
+        super().__init__(valor)
+        if parcelas < 1 or parcelas > 12:
             raise ValueError("O cartão aceita de 1 a 12 parcelas.")
         self.__parcelas = parcelas
 
@@ -38,8 +19,8 @@ class Cartao(Pagamento, Comprovante):
         return self.__parcelas
 
     def calcular_total(self):
-        # SOBREPOSIÇÃO: mesmo nome do método da classe mãe, cálculo próprio
-        if self.__parcelas > 3:    # RN9
+
+        if self.__parcelas > 3:    #
             return round(self._valor * (1 + Cartao.JUROS), 2)
         return round(self._valor, 2)
 

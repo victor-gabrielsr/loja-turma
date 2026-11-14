@@ -1,20 +1,8 @@
-"""
-Classe Pix (aula de 12/11).
-
-Fontes para estudar:
-- Herança:
-  https://docs.python.org/pt-br/3/tutorial/classes.html#inheritance
-- Herança múltipla:
-  https://docs.python.org/pt-br/3/tutorial/classes.html#multiple-inheritance
-- round (arredondar):
-  https://docs.python.org/pt-br/3/library/functions.html#round
-- Livro: KEOGH, J.; GIANNINI, M. OOP desmistificado. Alta Books, 2005.
-"""
-
 from models.comprovante import Comprovante
 from models.pagamento import Pagamento
 
-
+# HERANÇA: Pix herda os atributos e métodos de Pagamento.
+# Também implementa o contrato definido por Comprovante.
 class Pix(Pagamento, Comprovante):
     """
     HERANÇA: Pix É UM Pagamento.
